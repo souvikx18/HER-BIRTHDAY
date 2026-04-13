@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Sparkling%20Heart.png" alt="Sparkling Heart" width="100" />
   
-  # Inddu's Birthday Experience ✨
+  # Her Birthday Experience ✨
 
   <p align="center">
     <strong>A highly immersive, premium, and emotionally resonant web experience crafted with love.</strong>
@@ -55,8 +55,8 @@ If you wish to spin up this project locally and experience the magic:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/souvikx18/Inddu-s-Birthday.git
-   cd Inddu-s-Birthday
+   git clone https://github.com/souvikx18/HER-BIRTHDAY.git
+   cd HER-BIRTHDAY
    ```
 
 2. **Install the dependencies**
