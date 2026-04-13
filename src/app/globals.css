@@ -7,13 +7,18 @@
   --color-bright-pink: #ff1493;
 }
 
+
+
 :root {
-  --background: #fff0f5; /* lavenderblush */
-  --foreground: #6b2158; /* deep pink text */
+  --background: #fff0f5;
+  --foreground: #6b2158;
   --font-heading: var(--font-fredoka), sans-serif;
   --font-body: var(--font-quicksand), sans-serif;
+  --pink-glow: rgba(255, 105, 180, 0.6);
+  --deep-pink-glow: rgba(255, 20, 147, 0.5);
 }
 
+/* ── Aurora Body ───────────────────────────────────────── */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -21,51 +26,218 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 120% 60% at 50% -10%, rgba(255, 182, 193, 0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 50% at 90% 100%, rgba(255, 209, 220, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(226, 218, 255, 0.35) 0%, transparent 60%);
+  position: relative;
 }
 
+/* ── Moving aurora orbs ────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 105, 180, 0.18) 0%, transparent 70%);
+  animation: auroraOrb1 18s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(218, 112, 214, 0.18) 0%, transparent 70%);
+  animation: auroraOrb2 22s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes auroraOrb1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(150px, 100px) scale(1.2); }
+  100% { transform: translate(80px, 200px) scale(0.9); }
+}
+
+@keyframes auroraOrb2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-120px, -80px) scale(1.15); }
+  100% { transform: translate(-60px, -180px) scale(1.05); }
+}
+
+/* ── Cute Pink Gradient ────────────────────────────────── */
 .cute-bg {
-  /* Adorable pink gradient */
   background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 50%, #ffc0cb 100%);
 }
 
-/* Cute pillowy scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.4);
-}
+/* ── Premium Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.4); }
 ::-webkit-scrollbar-thumb {
-  background: #ff69b4;
+  background: linear-gradient(180deg, #ff69b4, #ff1493);
   border-radius: 20px;
   border: 2px solid white;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #ff1493;
-}
+::-webkit-scrollbar-thumb:hover { background: #ff1493; }
 
-/* Glassmorphism for cuteness - frosted white glass */
+/* ── Glassmorphism ─────────────────────────────────────── */
 .glass {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.15);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.18);
 }
 
-/* Glow utility for neon cute texts */
+.glass-dark {
+  background: rgba(255, 182, 193, 0.25);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 40px rgba(255, 105, 180, 0.22);
+}
+
+/* ── Glow Utilities ────────────────────────────────────── */
 .glow-text {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 105, 180, 0.6);
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 20px rgba(255, 105, 180, 0.7),
+    0 0 40px rgba(255, 20, 147, 0.4);
 }
 
 .glow-box {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 105, 180, 0.5);
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 105, 180, 0.5),
+    0 0 60px rgba(255, 20, 147, 0.2);
 }
 
-/* Polaroid style */
+/* ── Shimmer / Shine Effect ────────────────────────────── */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmerMove 2.5s infinite;
+}
+@keyframes shimmerMove {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ── Heartbeat Pulse ───────────────────────────────────── */
+.heartbeat {
+  animation: heartbeat 1.2s ease-in-out infinite;
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14%       { transform: scale(1.18); }
+  28%       { transform: scale(1); }
+  42%       { transform: scale(1.12); }
+  70%       { transform: scale(1); }
+}
+
+/* ── Sparkle Twinkle ───────────────────────────────────── */
+.twinkle {
+  animation: twinkle 2s ease-in-out infinite alternate;
+}
+@keyframes twinkle {
+  from { opacity: 0.3; transform: scale(0.7) rotate(-10deg); }
+  to   { opacity: 1;   transform: scale(1.1) rotate(10deg); }
+}
+
+/* ── Float Up/Down ─────────────────────────────────────── */
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+/* ── Gradient text ─────────────────────────────────────── */
+.gradient-text-love {
+  background: linear-gradient(135deg, #ff1493, #ff69b4, #db2777, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-soft {
+  background: linear-gradient(135deg, #ec4899, #f9a8d4, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Cursive / handwriting utility ────────────────────── */
+.font-cursive {
+  font-family: var(--font-dancing), cursive;
+}
+
+/* ── Ribbon ────────────────────────────────────────────── */
+.ribbon {
+  position: relative;
+  display: inline-block;
+}
+.ribbon::before,
+.ribbon::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  height: 3px;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, #ff69b4, transparent);
+  border-radius: 2px;
+}
+.ribbon::before { left: 0; }
+.ribbon::after  { right: 0; }
+
+/* ── Polaroid ──────────────────────────────────────────── */
 .polaroid {
   background: white;
   padding: 10px 10px 30px 10px;
-  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.15);
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2), 0 2px 8px rgba(0,0,0,0.06);
   border-radius: 4px;
+}
+
+/* ── Pulsing ring ──────────────────────────────────────── */
+.ring-pulse {
+  animation: ringPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes ringPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 18px rgba(255, 105, 180, 0);
+  }
+}
+
+/* ── Love Quote typography ─────────────────────────────── */
+.quote-mark {
+  font-family: var(--font-dancing), cursive;
+  font-size: 5rem;
+  line-height: 0.5;
+  color: rgba(255, 105, 180, 0.25);
+  vertical-align: -0.4em;
 }
