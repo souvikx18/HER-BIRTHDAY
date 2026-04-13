@@ -31,7 +31,7 @@ export default function Preloader({ onStart }: PreloaderProps) {
       <div className="relative z-10 flex flex-col items-center justify-center space-y-8 px-6 text-center">
         <motion.div
           animate={{ scale: [1, 1.2, 1], rotate: [0, 5, -5, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, type: "spring" }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
         >
           <Heart className="w-20 h-20 text-pink-500 fill-pink-400 drop-shadow-[0_0_15px_rgba(255,105,180,0.8)]" />
         </motion.div>

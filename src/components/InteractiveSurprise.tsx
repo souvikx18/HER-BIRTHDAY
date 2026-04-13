@@ -76,7 +76,7 @@ export default function InteractiveSurprise() {
           >
             <motion.div
               animate={{ scale: [1, 1.3, 1], rotate: [0, 10, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 2, type: "spring" }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
               className="mx-auto flex justify-center mb-6"
             >
               <Heart className="w-16 h-16 text-pink-500 fill-pink-400 drop-shadow-md" />

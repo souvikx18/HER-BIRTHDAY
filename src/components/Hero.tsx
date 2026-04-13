@@ -1,13 +1,17 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Heart, Star } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden px-4">
       {/* Magical Floating Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        {[...Array(15)].map((_, i) => {
+        {mounted && [...Array(15)].map((_, i) => {
           const Icon = i % 2 === 0 ? Heart : Star;
           return (
             <motion.div
