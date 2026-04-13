@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-romantic-pink: #ffb6c1;
+  --color-love-purple: #8a2be2;
+  --color-gold-accent: #ffd700;
+  --color-dark-slate: #0f0c29;
+  --color-deep-black: #05040d;
+}
+
+:root {
+  --background: #05040d;
+  --foreground: #fff5f8;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  /* Prevent horizontal scroll for mobile width */
+  overflow-x: hidden;
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+  /* Luxurious dark gradient background */
+  background: linear-gradient(135deg, #05040d 0%, #1a0b2e 50%, #05040d 100%);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar to make it look premium */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 182, 193, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 182, 193, 0.6);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow utility */
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 182, 193, 0.8), 0 0 20px rgba(255, 182, 193, 0.4);
+}
