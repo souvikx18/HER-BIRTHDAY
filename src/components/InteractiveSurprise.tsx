@@ -139,12 +139,14 @@ export default function InteractiveSurprise() {
 
   const handleOpenProposal = () => {
     setWinSize({ width: window.innerWidth, height: window.innerHeight });
+    window.history.pushState({ modal: 'surprise' }, '', '#surprise');
     setStage('proposal');
   };
 
   const handleYes = () => {
     setWinSize({ width: window.innerWidth, height: window.innerHeight });
     setSparkKey(k => k + 1);
+    window.history.replaceState({ modal: 'thankyou' }, '', '#thankyou');
     setStage('thankyou');
     setActiveSection(0);
   };
@@ -156,6 +158,17 @@ export default function InteractiveSurprise() {
     const t = setTimeout(() => setActiveSection(s => s + 1), 3800 + activeSection * 200);
     return () => clearTimeout(t);
   }, [stage, activeSection]);
+
+  // Handle native "Back" button so it closes the modal instead of exiting the app
+  useEffect(() => {
+    const handlePopState = () => {
+      if (!window.location.hash.includes('surprise') && !window.location.hash.includes('thankyou')) {
+        setStage('idle');
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   return (
     <section className="py-24 px-5 flex flex-col items-center justify-center relative min-h-[70vh]">
@@ -191,6 +204,7 @@ export default function InteractiveSurprise() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="fixed inset-0 z-50 overflow-y-auto"
+            data-lenis-prevent="true"
             style={{
               background: 'linear-gradient(160deg, #fff0f8 0%, #ffd6e7 30%, #ffe4f0 60%, #f5d0fe 100%)',
             }}

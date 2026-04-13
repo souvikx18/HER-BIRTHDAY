@@ -23,8 +23,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
-  overflow-x: hidden;
-  scroll-behavior: smooth;
   min-height: 100vh;
   background-image:
     radial-gradient(ellipse 120% 60% at 50% -10%, rgba(255, 182, 193, 0.55) 0%, transparent 70%),
@@ -241,3 +239,114 @@ body::after {
   color: rgba(255, 105, 180, 0.25);
   vertical-align: -0.4em;
 }
+
+/* ── Collage Aurora (lightweight — 2 layers only) ──────── */
+.collage-aurora {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 120% 80% at 50% 50%,
+    rgba(255,20,147,0.14) 0%,
+    rgba(255,105,180,0.10) 40%,
+    transparent 75%);
+  animation: collageAurora1 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.collage-aurora-2 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 20% 80%,
+    rgba(0,200,255,0.08) 0%,
+    rgba(255,215,0,0.06) 45%,
+    transparent 70%);
+  animation: collageAurora2 12s ease-in-out infinite alternate;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+@keyframes collageAurora1 {
+  0%   { transform: translateZ(0) scale(1);    opacity: 0.7; }
+  100% { transform: translateZ(0) scale(1.12); opacity: 1; }
+}
+@keyframes collageAurora2 {
+  0%   { transform: translateZ(0) scale(1);    opacity: 0.5; }
+  100% { transform: translateZ(0) scale(1.18); opacity: 0.85; }
+}
+
+/* ── CSS Sparkle dots (replaces Framer Motion sparkles) ─ */
+.collage-sparkle {
+  animation: sparklePop 2s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+@keyframes sparklePop {
+  0%, 100% { transform: translateZ(0) scale(0);   opacity: 0; }
+  50%       { transform: translateZ(0) scale(1.5); opacity: 1; }
+}
+
+/* ── Collage glow border — CSS animation, not JS ───────── */
+.collage-glow-border {
+  background: linear-gradient(135deg, #ff69b4, #ffd700, #00ffff, #ff1493, #a855f7);
+  background-size: 300% 300%;
+  animation: gradientShift 4s linear infinite;
+  padding: 3px;
+  will-change: background-position;
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Collage text glow — CSS only ──────────────────────── */
+.collage-glow-text {
+  animation: textGlowCycle 3s ease-in-out infinite alternate;
+  will-change: text-shadow;
+}
+@keyframes textGlowCycle {
+  0%   { text-shadow: 0 0 10px #ff69b4, 0 0 25px #ff69b4; }
+  50%  { text-shadow: 0 0 15px #ffd700, 0 0 35px #ffd700; }
+  100% { text-shadow: 0 0 10px #ff1493, 0 0 25px #ff1493; }
+}
+
+/* ── Global performance hints ───────────────────────────── */
+
+/* Force GPU layer on all animated elements */
+.float,
+.twinkle,
+.heartbeat,
+.shimmer::after,
+.ring-pulse {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Lenis required CSS — do not remove */
+html {
+  overflow-x: hidden; /* horizontal clip at root level only */
+}
+html.lenis,
+html.lenis body {
+  height: auto;       /* Lenis needs natural height, not 100% */
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important; /* prevent CSS smooth scroll fighting Lenis */
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Disable expensive CSS filter animations on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Keyframe: simple CSS pulse (for "TAP" hint) ───────── */
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 import Preloader from '@/components/Preloader';
 import Hero from '@/components/Hero';
+import BirthdayCollage from '@/components/BirthdayCollage';
 import JourneyTimeline from '@/components/JourneyTimeline';
 import LoveLetter from '@/components/LoveLetter';
 import Countdown from '@/components/Countdown';
@@ -45,6 +46,15 @@ export default function Home() {
         }`}
       >
         <Hero />
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 px-8 py-2">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent" />
+          <span className="text-2xl">🎂</span>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent" />
+        </div>
+
+        <BirthdayCollage />
 
         {/* Divider */}
         <div className="flex items-center gap-4 px-8 py-2">
