@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Quicksand, Fredoka } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
+const quicksand = Quicksand({ subsets: ['latin'], variable: '--font-quicksand' });
+const fredoka = Fredoka({ subsets: ['latin'], variable: '--font-fredoka' });
 
 export const metadata: Metadata = {
   title: 'Happy Birthday, My Love ❤️',
@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className={`${quicksand.variable} ${fredoka.variable} font-sans antialiased bg-pink-50`}>
         {/* The main wrapper forces the site to look like a mobile app even on desktop */}
-        <main className="max-w-md mx-auto min-h-screen relative shadow-2xl overflow-hidden bg-black/20">
+        <main className="max-w-md mx-auto min-h-screen relative shadow-2xl overflow-hidden cute-bg">
           {children}
         </main>
       </body>

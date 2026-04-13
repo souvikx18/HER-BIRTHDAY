@@ -1,57 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  --color-romantic-pink: #ffb6c1;
-  --color-love-purple: #8a2be2;
-  --color-gold-accent: #ffd700;
-  --color-dark-slate: #0f0c29;
-  --color-deep-black: #05040d;
+  --color-baby-pink: #ffd1dc;
+  --color-hot-pink: #ff69b4;
+  --color-pastel-purple: #e2daff;
+  --color-bright-pink: #ff1493;
 }
 
 :root {
-  --background: #05040d;
-  --foreground: #fff5f8;
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  --background: #fff0f5; /* lavenderblush */
+  --foreground: #6b2158; /* deep pink text */
+  --font-heading: var(--font-fredoka), sans-serif;
+  --font-body: var(--font-quicksand), sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
-  /* Prevent horizontal scroll for mobile width */
   overflow-x: hidden;
-  /* Smooth scrolling */
   scroll-behavior: smooth;
-  /* Luxurious dark gradient background */
-  background: linear-gradient(135deg, #05040d 0%, #1a0b2e 50%, #05040d 100%);
   min-height: 100vh;
 }
 
-/* Custom scrollbar to make it look premium */
+.cute-bg {
+  /* Adorable pink gradient */
+  background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 50%, #ffc0cb 100%);
+}
+
+/* Cute pillowy scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.4);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 182, 193, 0.3);
-  border-radius: 10px;
+  background: #ff69b4;
+  border-radius: 20px;
+  border: 2px solid white;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 182, 193, 0.6);
+  background: #ff1493;
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism for cuteness - frosted white glass */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.15);
 }
 
-/* Glow utility */
+/* Glow utility for neon cute texts */
 .glow-text {
-  text-shadow: 0 0 10px rgba(255, 182, 193, 0.8), 0 0 20px rgba(255, 182, 193, 0.4);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+.glow-box {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 105, 180, 0.5);
+}
+
+/* Polaroid style */
+.polaroid {
+  background: white;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.15);
+  border-radius: 4px;
 }
