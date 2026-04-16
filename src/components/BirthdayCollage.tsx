@@ -4,14 +4,14 @@ import { useRef, useState, useEffect } from 'react';
 
 // Reduced from 24 to 8 sparkles — and using CSS animations not Framer Motion
 const SPARKLE_STYLES = [
-  { top: '5%',  left: '10%', size: 8,  color: '#ff69b4', delay: '0s',    dur: '2s' },
-  { top: '10%', left: '88%', size: 10, color: '#ffd700', delay: '0.4s',  dur: '2.5s' },
-  { top: '50%', left: '95%', size: 7,  color: '#ff1493', delay: '0.8s',  dur: '1.8s' },
-  { top: '80%', left: '92%', size: 9,  color: '#00cfff', delay: '0.2s',  dur: '2.2s' },
-  { top: '85%', left: '5%',  size: 8,  color: '#a855f7', delay: '1s',    dur: '2s' },
-  { top: '40%', left: '2%',  size: 10, color: '#ff6b35', delay: '0.6s',  dur: '2.4s' },
-  { top: '20%', left: '50%', size: 6,  color: '#ff69b4', delay: '1.2s',  dur: '1.6s' },
-  { top: '65%', left: '50%', size: 7,  color: '#ffd700', delay: '0.3s',  dur: '2.8s' },
+  { top: '5%', left: '10%', size: 8, color: '#ff69b4', delay: '0s', dur: '2s' },
+  { top: '10%', left: '88%', size: 10, color: '#ffd700', delay: '0.4s', dur: '2.5s' },
+  { top: '50%', left: '95%', size: 7, color: '#ff1493', delay: '0.8s', dur: '1.8s' },
+  { top: '80%', left: '92%', size: 9, color: '#00cfff', delay: '0.2s', dur: '2.2s' },
+  { top: '85%', left: '5%', size: 8, color: '#a855f7', delay: '1s', dur: '2s' },
+  { top: '40%', left: '2%', size: 10, color: '#ff6b35', delay: '0.6s', dur: '2.4s' },
+  { top: '20%', left: '50%', size: 6, color: '#ff69b4', delay: '1.2s', dur: '1.6s' },
+  { top: '65%', left: '50%', size: 7, color: '#ffd700', delay: '0.3s', dur: '2.8s' },
 ];
 
 export default function BirthdayCollage() {
@@ -162,8 +162,8 @@ export default function BirthdayCollage() {
                 filter: clicked
                   ? 'brightness(1.4) saturate(2) hue-rotate(20deg)'
                   : hovered
-                  ? 'brightness(1.06) saturate(1.2)'
-                  : 'brightness(1)',
+                    ? 'brightness(1.06) saturate(1.2)'
+                    : 'brightness(1)',
                 transition: 'filter 0.3s ease',
                 willChange: 'filter',
               }}
