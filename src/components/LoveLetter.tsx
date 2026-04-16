@@ -57,7 +57,7 @@ export default function LoveLetter() {
             <motion.button
               whileHover={{ scale: 1.07 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setIsOpen(true)}
+              onClick={() => { new Audio('/touch.mp3').play().catch(console.error); setIsOpen(true); }}
               className="shimmer relative bg-gradient-to-br from-pink-400 to-rose-400 text-white font-heading font-bold text-lg px-8 py-5 rounded-[2rem] shadow-[0_10px_40px_rgba(255,105,180,0.45)] border-4 border-white/60 flex items-center gap-3 glow-box"
             >
               <span className="text-2xl">💌</span>

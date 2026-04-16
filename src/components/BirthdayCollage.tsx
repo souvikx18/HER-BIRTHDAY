@@ -42,6 +42,7 @@ export default function BirthdayCollage() {
 
   const handleClick = () => {
     setClicked(true);
+    new Audio('/touch.mp3').play().catch(console.error);
     const burst = Array.from({ length: 12 }, (_, i) => ({
       id: Date.now() + i,
       x: Math.random() * 200 - 100,

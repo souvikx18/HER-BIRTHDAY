@@ -39,7 +39,7 @@ export default function MemoriesGallery() {
             transition={{ type: "spring", delay: i * 0.15 }}
             whileHover={{ scale: 1.08, rotate: 0, zIndex: 10 }}
             className={`cursor-pointer polaroid flex flex-col items-center bg-white border border-pink-100 ${i === 0 || i === 3 ? 'aspect-[3/4]' : 'aspect-square'}`}
-            onClick={() => setSelectedId(photo.id)}
+            onClick={() => { new Audio('/touch.mp3').play().catch(console.error); setSelectedId(photo.id); }}
           >
             {/* Cute Heart Sticker Pin */}
             <div className="absolute -top-3 text-pink-500 z-10 drop-shadow-md">

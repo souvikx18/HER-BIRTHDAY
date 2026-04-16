@@ -138,12 +138,14 @@ export default function InteractiveSurprise() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const handleOpenProposal = () => {
+    new Audio('/touch.mp3').play().catch(console.error);
     setWinSize({ width: window.innerWidth, height: window.innerHeight });
     window.history.pushState({ modal: 'surprise' }, '', '#surprise');
     setStage('proposal');
   };
 
   const handleYes = () => {
+    new Audio('/touch.mp3').play().catch(console.error);
     setWinSize({ width: window.innerWidth, height: window.innerHeight });
     setSparkKey(k => k + 1);
     window.history.replaceState({ modal: 'thankyou' }, '', '#thankyou');

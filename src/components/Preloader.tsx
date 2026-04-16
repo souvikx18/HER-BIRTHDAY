@@ -122,7 +122,7 @@ export default function Preloader({ onStart }: PreloaderProps) {
               exit={{ opacity: 0, scale: 0.5 }}
               whileHover={{ scale: 1.1, rotate: -1 }}
               whileTap={{ scale: 0.95 }}
-              onClick={onStart}
+              onClick={() => { new Audio('/touch.mp3').play().catch(console.error); onStart(); }}
               className="shimmer mt-4 bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 border-4 border-white/80 px-10 py-4 rounded-full text-white font-heading text-xl shadow-[0_15px_40px_rgba(255,105,180,0.5)] hover:shadow-[0_20px_50px_rgba(255,105,180,0.7)] transition-all font-black tracking-wide flex items-center gap-3 glow-box"
             >
               <Heart size={22} className="fill-white heartbeat" />
