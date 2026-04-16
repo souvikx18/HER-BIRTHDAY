@@ -155,7 +155,7 @@ export default function BirthdayCollage() {
 
             {/* THE IMAGE — filter only changes on click/hover, not every frame */}
             <img
-              src="/birthday-collage.jpg"
+              src="/birthday-collage.jpeg"
               alt="Happy Birthday Inddu - Memories Collage"
               className="w-full h-auto block"
               style={{
