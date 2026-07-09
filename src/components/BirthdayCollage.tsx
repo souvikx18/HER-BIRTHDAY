@@ -70,7 +70,7 @@ export default function BirthdayCollage() {
         className="relative z-10 text-center mb-12"
       >
         <p className="font-heading text-pink-500 tracking-[0.3em] text-sm uppercase mb-2 twinkle">
-          ✨ April 18 — The Most Special Day ✨
+          ✨ July 10 — The Most Special Day ✨
         </p>
         <h2
           className="font-heading font-black leading-tight"
@@ -156,8 +156,8 @@ export default function BirthdayCollage() {
 
             {/* THE IMAGE — filter only changes on click/hover, not every frame */}
             <img
-              src="/birthday-collage.jpeg"
-              alt="Happy Birthday Inddu - Memories Collage"
+              src="/birthday-collage.jpg"
+              alt="Happy Birthday Sonu - Memories Collage"
               className="w-full h-auto block"
               style={{
                 filter: clicked
@@ -179,7 +179,7 @@ export default function BirthdayCollage() {
                 className="font-cursive text-white text-center text-xl collage-glow-text"
                 style={{ fontFamily: "'Dancing Script', cursive" }}
               >
-                Happy Birthday, Inddu 💖
+                Happy Birthday, Sonu 💖
               </p>
             </div>
           </div>

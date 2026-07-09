@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const LETTER_LINES = [
-  { text: "To my precious, wonderful Inddu,", bold: true, size: "text-xl" },
+  { text: "To my precious, wonderful Sonu,", bold: true, size: "text-xl" },
   { text: "" },
   { text: "From the moment you walked into my life, the world became more colourful.", size: "text-lg" },
   { text: "You turned my ordinary days into something magical — just by being you." },
@@ -22,7 +22,7 @@ const LETTER_LINES = [
   { text: "May every dream you carry bloom into something beautiful 🌹" },
   { text: "" },
   { text: "Forever yours,", bold: true },
-  { text: "Souvik 💌", bold: true, size: "text-xl" },
+  { text: "Surja 💌", bold: true, size: "text-xl" },
 ];
 
 export default function LoveLetter() {

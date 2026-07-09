@@ -55,7 +55,7 @@ If you wish to spin up this project locally and experience the magic:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/souvikx18/HER-BIRTHDAY.git
+   git clone https://github.com/surjax18/HER-BIRTHDAY.git
    cd HER-BIRTHDAY
    ```
 
@@ -75,5 +75,5 @@ If you wish to spin up this project locally and experience the magic:
 
 ---
 
-### 💖 Developed by Souvik
+### 💖 Developed by Surja
 *Because the best code is written from the heart.*

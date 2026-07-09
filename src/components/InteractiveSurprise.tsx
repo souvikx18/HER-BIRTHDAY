@@ -53,7 +53,7 @@ const TY_SECTIONS = [
   },
   {
     emoji: "✨",
-    headline: "ধন্যবাদ, Inddu",
+    headline: "ধন্যবাদ, Sonu",
     lines: [
       "আমাকে বেছে নেওয়ার জন্য ধন্যবাদ।",
       "আমার ভুলগুলো মেনে নেওয়ার জন্য ধন্যবাদ।",
@@ -469,7 +469,7 @@ export default function InteractiveSurprise() {
                         className="font-cursive text-pink-500 text-2xl"
                         style={{ fontFamily:'var(--font-dancing), cursive' }}
                       >
-                        — Yours forever, Souvik 💌
+                        — Yours forever, Surja 💌
                       </p>
                       <p className="text-pink-400 text-sm font-medium">
                         তোমাকেই চাই, চিরকালের জন্য। 🌹
@@ -532,7 +532,7 @@ export default function InteractiveSurprise() {
                 আমার Secret টা দেখো ✨
               </motion.button>
               <p className="text-pink-400 text-sm font-medium animate-pulse">
-                শুধু তোমার জন্য, Inddu… 🌸
+                শুধু তোমার জন্য, Sonu… 🌸
               </p>
             </motion.div>
           )}
