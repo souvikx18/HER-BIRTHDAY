@@ -111,11 +111,11 @@ export default function Home() {
             className="font-cursive text-pink-500 text-2xl"
             style={{ fontFamily: "'Dancing Script', cursive" }}
           >
-            Made with every ounce of love, just for you, Sonu 💖
+            Made with every ounce of love, just for you, My Love 💖
           </p>
           <div className="flex items-center justify-center gap-2 text-pink-400 text-sm font-heading font-bold">
             <Heart size={14} className="fill-pink-400" />
-            <span>Surja &amp; Sonu — Forever</span>
+            <span>Your Love &amp; My Love — Forever</span>
             <Heart size={14} className="fill-pink-400" />
           </div>
         </motion.footer>

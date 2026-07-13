@@ -6,59 +6,59 @@ import { Heart, Sparkles } from 'lucide-react';
 
 /* ── Proposal build-up lines ─────────────────────────── */
 const PROPOSAL_LINES = [
-  { bn: "আমার খেপি,", en: "My most precious one," },
-  { bn: "তুমি আমার জীবনে আসার পর থেকেই", en: "Ever since you came into my life," },
-  { bn: "প্রতিটা সকাল আরও সুন্দর হয়ে উঠেছে।", en: "every morning has become more beautiful." },
-  { bn: "তুমি আমার সুখ, আমার শান্তি,", en: "You are my happiness, my peace," },
-  { bn: "আমার একমাত্র আশ্রয় আর সাহস।", en: "my only shelter and my courage." },
+  { bn: "To My Beautiful Chaos,", en: "The one who drives me wonderfully crazy..." },
+  { bn: "Ever since you stepped into my world,", en: "every single moment started feeling like poetry." },
+  { bn: "You made my ordinary mornings beautiful,", en: "and turned my quiet days into sweet melodies." },
+  { bn: "You are my peace, my wild adventure,", en: "the only harbor my heart ever wants to sail to." },
+  { bn: "My strength, my favorite distraction,", en: "and the beautiful answer to all my prayers." },
   { bn: "", en: "" },
-  { bn: "আমি তোমাকে চিরদিনের জন্য চাই। 💖", en: "I want you for all of forever. 💖" },
+  { bn: "I want you in my today, my tomorrow, and my forever. 💖", en: "Because forever still isn't enough with you. 💖" },
 ];
 
 /* ── Thank-you sections — shown as blocks ─────────────── */
 const TY_SECTIONS = [
   {
     emoji: "💍",
-    headline: "হ্যাঁ বলার জন্য ধন্যবাদ",
+    headline: "Thank you for saying YES!",
     lines: [
-      "আমি জানতাম তুমি কোনোদিন না বলবে না,",
-      "কারণ আমরা একে অপরের জন্যই তৈরি হয়েছি।",
-      "তোমার এই একটা 'হ্যাঁ' আমার গোটা পৃথিবী বদলে দিয়েছে।",
+      "Honestly, I always knew our hearts spoke the same language,",
+      "written in the stars, custom-made for each other.",
+      "That single, beautiful 'Yes' of yours has completely rewritten my universe.",
     ],
-    en: "\"I knew it — because we were made for each other.\"",
+    en: "\"I knew it — because we were made for each other. 💍\"",
   },
   {
     emoji: "🌹",
-    headline: "তুমি আমার সবকিছু",
+    headline: "You Are My Everything",
     lines: [
-      "তুমি আমার রাতের শেষ চিন্তা,",
-      "আর সকালের প্রথম হাসির কারণ।",
-      "তোমাকে ছাড়া আমার কোনো স্বপ্নই সম্পূর্ণ না।",
-      "তুমি শুধু আমার ভালোবাসা নও —",
-      "তুমি আমার বাড়ি। 🏡",
+      "You are the final, sweet thought on my mind before I sleep,",
+      "and the first, beautiful reason for my smile when I wake up.",
+      "None of my dreams make any sense without you in them.",
+      "You are not just the love of my life—",
+      "you are my home, my safe haven. 🏡",
     ],
     en: "\"You are not just my love — you are my home.\"",
   },
   {
     emoji: "💌",
-    headline: "চিরকালের প্রতিশ্রুতি",
+    headline: "My Lifetime Vow to You",
     lines: [
-      "আজ থেকে আমি তোমার পাশে থাকব —",
-      "তোমার প্রতিটা ভালো দিনে হাত ধরে হাঁটব,",
-      "আর প্রতিটা কঠিন দিনে তোমার ঢাল হয়ে দাঁড়াব।",
-      "তোমার চোখের জল মুছিয়ে দেওয়াটাই আমার দায়িত্ব।",
-      "তোমাকে সারাজীবন ভালোবাসা আমার সিদ্ধান্ত। 🌸",
+      "From this second onward, I am yours completely —",
+      "I'll hold your hand to walk through all your brightest days,",
+      "and stand as your shield through every single storm.",
+      "Chasing away your tears is my sacred promise,",
+      "and loving you endlessly is my absolute destiny. 🌸",
     ],
     en: "\"Loving you forever is not a feeling — it's my decision.\"",
   },
   {
     emoji: "✨",
-    headline: "ধন্যবাদ, Sonu",
+    headline: "Thank You, My Love",
     lines: [
-      "আমাকে বেছে নেওয়ার জন্য ধন্যবাদ।",
-      "আমার ভুলগুলো মেনে নেওয়ার জন্য ধন্যবাদ।",
-      "আমার ছোট ছোট ভালোবাসাগুলো বুঝে নেওয়ার জন্য ধন্যবাদ।",
-      "তুমি আমার জীবনের সবচেয়ে সুন্দর অধ্যায়। 💝",
+      "Thank you for choosing me to walk this beautiful life with you,",
+      "for embracing all my flaws with so much patience,",
+      "and for cherishing every little way I try to love you.",
+      "You are, and will always be, the most beautiful chapter of my life. 💝",
     ],
     en: "\"Thank you for choosing me, exactly as I am.\"",
   },
@@ -289,7 +289,7 @@ export default function InteractiveSurprise() {
                 ))}
               </motion.div>
 
-              {/* "তুমি হ্যাঁ বললে!" banner */}
+              {/* "You Said Yes" banner */}
               <motion.div
                 initial={{ opacity:0, scale:0.5, y:20 }}
                 animate={{ opacity:1, scale:1, y:0 }}
@@ -301,7 +301,7 @@ export default function InteractiveSurprise() {
                   transition={{ duration:2, repeat:Infinity }}
                   className="font-heading font-black text-4xl gradient-text-love glow-text leading-tight"
                 >
-                  তুমি হ্যাঁ বললে! 🎊
+                  You Said YES to Forever! 🎊
                 </motion.h1>
                 <motion.p
                   initial={{ opacity:0 }}
@@ -429,11 +429,11 @@ export default function InteractiveSurprise() {
                           transition={{ duration:2, repeat:Infinity }}
                           className="font-heading font-black text-3xl gradient-text-love glow-text"
                         >
-                          আজ থেকে আমরা একসাথে
+                          Together, Hand in Hand
                         </motion.p>
                         <p className="font-heading font-bold text-pink-600 text-lg">
-                          তোমার হাত ধরেই আমার পথ চলা,<br/>
-                          তোমার চোখেই আমার পৃথিবী। 🌍
+                          My journey begins and ends in your embrace,<br/>
+                          And my entire universe resides in your eyes. 🌍
                         </p>
                         <p
                           className="font-cursive text-pink-400 text-xl italic"
@@ -469,10 +469,10 @@ export default function InteractiveSurprise() {
                         className="font-cursive text-pink-500 text-2xl"
                         style={{ fontFamily:'var(--font-dancing), cursive' }}
                       >
-                        — Yours forever, Surja 💌
+                        — Yours forever, Your Love 💌
                       </p>
                       <p className="text-pink-400 text-sm font-medium">
-                        তোমাকেই চাই, চিরকালের জন্য। 🌹
+                        It is you, and only you, for all of my days. 🌹
                       </p>
                     </motion.div>
                   </motion.div>
@@ -496,7 +496,7 @@ export default function InteractiveSurprise() {
       >
         <span className="text-4xl block mb-2 float">💍</span>
         <h2 className="font-heading font-black text-3xl md:text-4xl gradient-text-love glow-text">
-          একটাই কথা বলার আছে…
+          My heart has one final secret...
         </h2>
         <p className="font-cursive text-pink-400 text-lg mt-2" style={{ fontFamily:'var(--font-dancing), cursive' }}>
           The most important thing I&apos;ll ever say... 🌹
@@ -519,7 +519,7 @@ export default function InteractiveSurprise() {
             >
               <div className="glass-dark px-6 py-5 rounded-3xl border-2 border-white/60 text-center">
                 <p className="font-cursive text-pink-600 text-xl" style={{ fontFamily:'var(--font-dancing), cursive' }}>
-                  &quot;অনেকদিন ধরে একটা কথা বলতে চাইছিলাম…&quot; 💖
+                  &quot;I've been holding onto a special question just for you...&quot; 💖
                 </p>
               </div>
               <motion.button
@@ -529,10 +529,10 @@ export default function InteractiveSurprise() {
                 className="shimmer bg-gradient-to-r from-pink-400 via-rose-500 to-pink-600 px-10 py-5 rounded-[3rem] text-white font-heading font-black text-xl shadow-[0_15px_40px_rgba(255,105,180,0.5)] border-4 border-white/70 flex items-center gap-4 glow-box"
               >
                 <Heart size={26} className="fill-white heartbeat" />
-                আমার Secret টা দেখো ✨
+                Unlock My Heart ✨
               </motion.button>
               <p className="text-pink-400 text-sm font-medium animate-pulse">
-                শুধু তোমার জন্য, Sonu… 🌸
+                Made only for you, My Love… 🌸
               </p>
             </motion.div>
           )}
@@ -589,14 +589,14 @@ export default function InteractiveSurprise() {
                     className="glass-dark p-6 rounded-3xl border-2 border-pink-200"
                   >
                     <p className="font-heading font-bold text-pink-600 text-sm mb-3">
-                      তাই আজ, আমার জীবনের সবচেয়ে গুরুত্বপূর্ণ প্রশ্ন —
+                      So today, with all my love, I ask you the ultimate question —
                     </p>
                     <motion.p
                       animate={{ scale:[1,1.05,1] }}
                       transition={{ duration:2, repeat:Infinity }}
                       className="font-heading font-black text-3xl md:text-4xl gradient-text-love glow-text"
                     >
-                      তুমি কি আমাকে বিয়ে করবে? 💍❤️
+                      Will you marry me? 💍❤️
                     </motion.p>
                     <p className="font-cursive text-pink-400 text-lg mt-3 italic"
                       style={{ fontFamily:'var(--font-dancing), cursive' }}>
@@ -617,7 +617,7 @@ export default function InteractiveSurprise() {
                       onClick={handleYes}
                       className="shimmer bg-gradient-to-r from-pink-400 to-rose-500 text-white font-heading font-black px-8 py-3 rounded-full shadow-[0_8px_30px_rgba(255,105,180,0.55)] border-2 border-white flex items-center gap-2 glow-box"
                     >
-                      <Heart size={17} className="fill-white heartbeat" /> হ্যাঁ! 💖
+                      <Heart size={17} className="fill-white heartbeat" /> Yes! 💖
                     </motion.button>
                     <motion.button
                       whileHover={{ scale:1.13, rotate:2 }}

@@ -75,5 +75,5 @@ If you wish to spin up this project locally and experience the magic:
 
 ---
 
-### 💖 Developed by Surja
+### 💖 Developed by Your Love
 *Because the best code is written from the heart.*

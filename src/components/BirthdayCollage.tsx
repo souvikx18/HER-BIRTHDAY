@@ -156,8 +156,8 @@ export default function BirthdayCollage() {
 
             {/* THE IMAGE — filter only changes on click/hover, not every frame */}
             <img
-              src="/birthday-collage.jpg"
-              alt="Happy Birthday Sonu - Memories Collage"
+              src="/birthday-collage.png"
+              alt="Happy Birthday My Love - Memories Collage"
               className="w-full h-auto block"
               style={{
                 filter: clicked
@@ -179,7 +179,7 @@ export default function BirthdayCollage() {
                 className="font-cursive text-white text-center text-xl collage-glow-text"
                 style={{ fontFamily: "'Dancing Script', cursive" }}
               >
-                Happy Birthday, Sonu 💖
+                Happy Birthday, My Love 💖
               </p>
             </div>
           </div>

@@ -126,7 +126,7 @@ export default function Countdown() {
               <h2 className="font-heading font-black text-4xl md:text-5xl gradient-text-love glow-text leading-tight">
                 Happy Birthday
                 <br />
-                My Love Sonu
+                My Love
               </h2>
               <p className="font-cursive text-pink-500 text-2xl" style={{ fontFamily: "'Dancing Script', cursive" }}>
                 You are my whole world, today and forever... 💍✨

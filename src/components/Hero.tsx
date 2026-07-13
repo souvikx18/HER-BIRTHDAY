@@ -98,7 +98,7 @@ export default function Hero() {
               className="font-cursive text-pink-600"
               style={{ fontSize: 'clamp(3.5rem, 11vw, 6.5rem)', lineHeight: 1.1 }}
             >
-              Sonu 💖
+              My Love 💖
             </span>
           </h1>
         </motion.div>
@@ -138,7 +138,7 @@ export default function Hero() {
         >
           <div className="h-px w-12 bg-gradient-to-r from-transparent to-pink-400" />
           <span className="font-cursive text-pink-500 text-lg" style={{ fontFamily: "'Dancing Script', cursive" }}>
-            — Yours forever, Surja —
+            — Yours forever, Your Love —
           </span>
           <div className="h-px w-12 bg-gradient-to-l from-transparent to-pink-400" />
         </motion.div>
